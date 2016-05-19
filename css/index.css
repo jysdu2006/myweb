@@ -11,8 +11,7 @@
 }
 
 .panel-body img{
-	max-width: 360px;
-	height: 320px;
+	max-width: 100%;
 }
 a{
 	cursor: pointer;
