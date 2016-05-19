@@ -14,6 +14,7 @@ function get_cont(){
 			html+=data[i]['picUrl']+'></a></div><div class="panel-footer">';
 			html+=data[i]['description']+' '+data[i]['ctime']+'</div></div>';
 		}
+		alert(html);
 		$('.content_part').empty();
 		//$(html).appendTo($('.content_part'));
 	});
