@@ -43,3 +43,9 @@ function pageScroll() {
 	//scrolldelay=setTimeout('pageScroll()',1);
 	scroll(0,0);
 }
+
+function init(){
+	var text='<style>img{width:'+document.body.clientWidth+'px;}</style>';
+	$(text).appendTo(document.body);
+}
+init();
