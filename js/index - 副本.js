@@ -15,11 +15,11 @@ function get_cont(){
 			html+=data[i]['description']+' '+data[i]['ctime']+'</div></div>';
 		}
 		$('.content_part').empty();
-		//$(html).appendTo($('.content_part'));
+		$(html).appendTo($('.content_part'));
 	});
 }
 
-//get_cont();
+get_cont();
 
 $('#goto').click(function(){
 	page=1;
