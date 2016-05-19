@@ -2,12 +2,12 @@ var page=1;
 
 
 function get_cont(){
-	alert('abc');
 	var text=$('.form-control').val();
 	$.get('server/excute.php',{type:'getcont',cont:text,page:page},function(jsondata){
+		alert(jsondata);
 		var data=eval(jsondata);
 		var html='';
-		alert(data);
+		alert(jsondata);
 		for(var i=0;i<data.length;i++){
 			html+='<div class="panel panel-default"><div class="panel-heading"><a href=';
 			html+=data[i]['url']+'><h1 class="panel-title">';
