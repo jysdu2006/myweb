@@ -6,6 +6,7 @@ function get_cont(){
 	$.get('server/excute.php',{type:'getcont',cont:text,page:page},function(jsondata){
 		var data=eval(jsondata);
 		var html='';
+		alert(data);
 		for(var i=0;i<data.length;i++){
 			html+='<div class="panel panel-default"><div class="panel-heading"><a href=';
 			html+=data[i]['url']+'><h1 class="panel-title">';
