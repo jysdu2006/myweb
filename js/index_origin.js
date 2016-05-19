@@ -3,8 +3,7 @@ var page=1;
 function get_cont(){
 	var text=$('.form-control').val();
 	$.get('server/excute.php',{type:'getcont',cont:text,page:page},function(jsondata){
-		var testdata=jsondata.split('<');
-		var data=eval(testdata[0]);
+		var data=eval(jsondata);
 		var html='';
 		for(var i=0;i<data.length;i++){
 			html+='<div class="panel panel-default"><div class="panel-heading"><a href=';
