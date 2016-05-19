@@ -4,8 +4,10 @@ var page=1;
 function get_cont(){
 	var text=$('.form-control').val();
 	$.get('server/excute.php',{type:'getcont',cont:text,page:page},function(jsondata){
+		alert(jsondata);
 		var data=eval(jsondata);
 		var html='';
+		alert(jsondata);
 		for(var i=0;i<data.length;i++){
 			html+='<div class="panel panel-default"><div class="panel-heading"><a href=';
 			html+=data[i]['url']+'><h1 class="panel-title">';
@@ -14,12 +16,13 @@ function get_cont(){
 			html+=data[i]['picUrl']+'></a></div><div class="panel-footer">';
 			html+=data[i]['description']+' '+data[i]['ctime']+'</div></div>';
 		}
+		alert(html);
 		$('.content_part').empty();
-		$(html).appendTo($('.content_part'));
+		//$(html).appendTo($('.content_part'));
 	});
 }
 
-get_cont();
+//get_cont();
 
 $('#goto').click(function(){
 	page=1;
