@@ -1,10 +1,11 @@
 var page=1;
-
+var testdata;
 
 function get_cont(){
 	var text=$('.form-control').val();
 	$.get('server/excute.php',{type:'getcont',cont:text,page:page},function(jsondata){
 		//var data=eval(jsondata);
+		testdata=jsondata;
 		var data=eval("("+jsondata+")");
 		var html='';
 		for(var i=0;i<data.length;i++){
