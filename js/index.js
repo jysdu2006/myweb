@@ -2,6 +2,7 @@ var page=1;
 
 
 function get_cont(){
+	alert('abc');
 	var text=$('.form-control').val();
 	$.get('server/excute.php',{type:'getcont',cont:text,page:page},function(jsondata){
 		var data=eval(jsondata);
