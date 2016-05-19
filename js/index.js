@@ -19,7 +19,7 @@ function get_cont(){
 	});
 }
 
-get_cont();
+//get_cont();
 
 $('#goto').click(function(){
 	page=1;
