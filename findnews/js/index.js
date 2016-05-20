@@ -15,6 +15,7 @@ function get_cont(){
 			html+=data[i]['abstract']+'</div></div>';
 		}
 		$('.content_part').empty();
+		alert(html);
 		$(html).appendTo($('.content_part'));
 	});
 }
