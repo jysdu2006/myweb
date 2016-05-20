@@ -9,7 +9,7 @@ function get_cont(){
 		for(var i=0;i<data.length;i++){
 			var len=data[i]['url'].length;
 			if(data[i]['url'][len-1]=='/')
-				data[i]['url'][len-1]='';
+				data[i]['url']=data[i]['url'].substr(0,len-1);
 			html+='<div class="media"><div class="media-left"><a href=';
 			html+=data[i]['url']+'><img class="media-object" src=';
 			html+=data[i]['image_url']+'></a></div><div class="media-body"><a href=';
@@ -18,7 +18,6 @@ function get_cont(){
 			html+=data[i]['abstract']+'</div></div>';
 		}
 		$('.content_part').empty();
-		alert(html);
 		$(html).appendTo($('.content_part'));
 	});
 }
