@@ -1,0 +1,34 @@
+
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<title>主题精选</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div class='search_part'>
+		<div class="input-group">
+	      <input type="text" class="form-control" placeholder="Search for..." onkeypress="get_cont()">
+	      <span class="input-group-btn">
+	        <button class="btn btn-default" type="button" id='goto'>Go!</button>
+	      </span>
+	    </div>
+	</div>
+
+	<div class='content_part'></div>
+
+	<div class='divpage_part'>
+		<nav>
+		  <ul class="pager">
+		    <li><a id='prev'>Previous</a></li>
+		    <li><a id='next'>Next</a></li>
+		  </ul>
+		</nav>
+	</div>
+	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src='js/index.js'></script>
+</body>
+</html>
