@@ -1,5 +1,4 @@
 var page=1;
-var html;
 
 function get_cont(){
 	var text=$('.form-control').val();
@@ -8,6 +7,9 @@ function get_cont(){
 		var data=eval(testdata[0]);
 		var html='';
 		for(var i=0;i<data.length;i++){
+			var len=data[i]['url'].length;
+			if(data[i]['url'][len-1]=='/')
+				data[i]['url'][len-1]='';
 			html+='<div class="media"><div class="media-left"><a href=';
 			html+=data[i]['url']+'><img class="media-object" src=';
 			html+=data[i]['image_url']+'></a></div><div class="media-body"><a href=';
