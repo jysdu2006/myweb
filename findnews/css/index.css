@@ -18,4 +18,5 @@ a{
 }
 .media{
 	height: 130px;
+	overflow: auto;
 }
