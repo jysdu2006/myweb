@@ -1,4 +1,5 @@
 var page=1;
+var html;
 
 function get_cont(){
 	var text=$('.form-control').val();
